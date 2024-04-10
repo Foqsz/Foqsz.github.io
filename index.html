@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi, I'm Victor Vinicius</title>
+    <link rel="icon" href="imagens/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Estilos para dispositivos móveis */
+        @media screen and (max-width: 768px) {
+            .banner-dentro {
+                width: 90%;
+                left: 5%;
+                transform: translate(0, -40%);
+            }
+            .ul-social-media li {
+                margin-right: 5px;
+            }
+            footer {
+                background-color: #000;
+                padding: 20px 0;
+                color: #fff;
+                text-align: center;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+            .avatar_social {
+                margin-top: 20px;
+                text-align: center;
+            }
+            header h1 {
+                font-size: 2em; /* Reduzindo o tamanho da fonte do cabeçalho */
+            }
+            .anime-init {
+                opacity: 1; /* Mantém a opacidade dos elementos */
+                transform: translateY(0); /* Mantém a posição dos elementos */
+            }
+        }
+
+        /* Estilos para desktop */
+        @media screen and (min-width: 768px) {
+            .avatar_social {
+                margin-bottom: 30px;
+            }
+            .ul-social-media li {
+                margin-right: 15px;
+            }
+            footer {
+                background-color: #000;
+                padding: 20px 0;
+                color: #fff;
+                text-align: center;
+            }
+            footer a {
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+            footer a:hover {
+                color: #0059ff;
+            }
+        }
+
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background-image: url('https://i.imgur.com/Wi6ed6c.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .ul-social-media {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .ul-social-media li a img {
+            height: 30px;
+        }
+
+        .avatar_social img {
+            max-width: 200px;
+            border-radius: 100px;
+            box-shadow: rgba(0, 0, 0, 0.507) 3px 3px 15px 0px;
+            margin-bottom: 20px;
+            transition: all 0.5s ease;
+            margin-top: 50px; /* Margem superior adicionada */
+        }
+
+        .avatar_social img:hover {
+            transform: scale(1.1);
+        }
+
+        .anime {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease-in-out;
+        }
+
+        .anime-init {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-about {
+            background-color: #000;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .section-about h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .section-about p {
+            font-size: 1.2em;
+            color: #fff;
+            margin-bottom: 30px;
+            transition: all 0.5s ease;
+        }
+
+        .section-about p:hover {
+            color: #0059ff;
+        }
+
+        .section-projects {
+            background-color: #000;
+            padding: 50px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .section-projects h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            transition: all 0.5s ease;
+        }
+
+        .section-projects h2:hover {
+            color: #ffd700;
+        }
+
+        .section-projects p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            transition: all 0.5s ease;
+        }
+
+        .section-projects p:hover {
+            color: #0059ff;
+        }
+
+        /* Estilo para a aba "Feito por Victor Vinicius" */
+        .feito-por-victor {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+            z-index: 1000;
+        }
+
+        /* Classe para animar o desaparecimento */
+        .fadeOut {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container banner-initial" id="home">
+            <div class="banner-dentro anime-init">
+                <h1>Hi, I'm Victor Vinicius</h1>
+            </div>
+        </div>
+
+        <div class="container avatar_social anime-init">
+            <img src="https://i.imgur.com/cSWwJff.png" class="avatar_imagem anime" alt="Sua imagem de perfil">
+        </div>
+
+        <ul class="ul-social-media anime-init">
+            <li><a href="https://github.com/Foqsz" target="_blank"><img src="https://i.imgur.com/MsXHhtL.png" alt="GitHub"></a></li>
+            <li><a href="https://instagram.com/victorviniciussz" target="_blank"><img src="https://i.imgur.com/l1ALufQ.png" alt="Instagram"></a></li>
+            <li><a href="https://www.linkedin.com/in/victor-vinicius-2a9166255/" target="_blank"><img src="https://i.imgur.com/IGRf0xt.png" alt="LinkedIn"></a></li>
+            <li><a href="mailto:contatovictorvinicius05@gmail.com"><img src="https://i.imgur.com/Xb42GEB.png" alt="Gmail"></a></li>
+        </ul>
+    </header>
+
+    <main class="container">
+        <section class="section-about">
+            <div class="container" id="div-sobre">
+                <div class="anime-init">
+                    <h2>About Me</h2>
+                    <p class="anime-init">I'm a student of Systems Analysis and Development, focusing on learning C# and .NET. I'm always seeking opportunities to improve my skills in software development.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-projects">
+            <div class="container" style="background-color: #000; padding: 30px;">
+                <h2 class="anime-init">Projects</h2>
+                <p class="anime-init">Check out some of my projects:</p>
+                <p class="anime-init">Sistema Web ASP-NET Core Entity Framework - <a href="https://github.com/Foqsz/SistemaWeb-ASP-NET-Core-MVC-EntityFramework" class="anime-init">GitHub</a></p>
+                <p class="anime-init">Xadrez de console - <a href="https://github.com/Foqsz/xadrez-de-console" class="anime-init">GitHub</a></p>
+            </div>
+        </section>
+    </main>
+ 
+
+    <!-- Script para fazer a aba "Feito por Victor Vinicius" desaparecer após alguns segundos -->
+    <script>
+        setTimeout(function () {
+            var feitoPorMim = document.createElement('div');
+            feitoPorMim.textContent = 'Feito por Victor Vinicius';
+            feitoPorMim.classList.add('feito-por-victor');
+            document.body.appendChild(feitoPorMim);
+            setTimeout(function () {
+                feitoPorMim.classList.add('fadeOut');
+                setTimeout(function () {
+                    feitoPorMim.remove();
+                }, 1000);
+            }, 3000); // Tempo em milissegundos para a aba desaparecer (3000 = 3 segundos)
+        }, 1000); // Tempo em milissegundos para iniciar a animação (1000 = 1 segundo)
+    </script>
+</body>
+
+</html>
