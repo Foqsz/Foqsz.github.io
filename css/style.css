@@ -35,14 +35,14 @@ body
     font-size: 1.6rem;
     margin-bottom: 0;
     color: var(--primary-color);
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.61);
 }
 
 .content-subtitle{
     font-family: "Caveat", cursive;
-    margin-top: 0;
+    margin-top: 0.3rem;
     font-size: 2rem;
-    letter-spacing: .1rem;
+    letter-spacing: .2rem;
     color: var(--gray);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -74,8 +74,11 @@ body
 .header-icons__whatsapp { 
     display: inline-block;     
     transition: color .3s ease-in-out;
-    margin-top: 1rem;
-    padding: 0.5rem; 
+    margin-top: 1rem; 
+    padding-top: 0.5rem;
+    padding-bottom: 0.3rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
     background-color: var(--primary-color);
     border-radius: .7rem;
 }
@@ -141,7 +144,6 @@ body
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: var(--dark);
     color: var(--light);    
     letter-spacing: .1rem;
     font-size: 1.1rem;
