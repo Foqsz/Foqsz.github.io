@@ -74,7 +74,7 @@ body
 .header-icons__whatsapp { 
     display: inline-block;     
     transition: color .3s ease-in-out;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     padding: 0.5rem; 
     background-color: var(--primary-color);
     border-radius: .7rem;
@@ -135,4 +135,15 @@ body
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         font-size: 1.5rem;
     }
+
+    .content-footer{  
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--dark);
+    color: var(--light);    
+    letter-spacing: .1rem;
+    font-size: 1.1rem;
+}
 }
