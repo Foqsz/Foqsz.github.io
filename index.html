@@ -1,183 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi, I'm Victor Vinicius!</title>
-    <link rel="icon" href="imagens/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/site.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #121212;
-            color: #fff;
-        }
-
-        header {
-            background-image: url('https://i.imgur.com/Wi6ed6c.jpeg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 70px 0;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        .avatar_social img {
-            max-width: 150px;
-            border-radius: 50%;
-            box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 15px 0px;
-            margin: 20px auto;
-            transition: transform 0.5s ease;
-        }
-
-        .avatar_social img:hover {
-            transform: scale(1.1);
-        }
-
-        .section {
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .section h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #0059ff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .section p {
-            font-size: 1.2em;
-            margin: 10px 0 30px;
-            transition: color 0.3s ease;
-        }
-
-        .section p:hover {
-            color: #0059ff;
-        }
-
-        .ul-social-media {
-            list-style-type: none;
-            padding: 0;
-            margin: 20px 0;
-        }
-
-        .ul-social-media li {
-            display: inline-block;
-            margin: 0 10px;
-        }
-
-        .ul-social-media li img {
-            height: 40px;
-            transition: transform 0.3s ease;
-        }
-
-        .ul-social-media li img:hover {
-            transform: scale(1.1);
-        }
-
-        footer {
-            background-color: #000;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: #0059ff;
-        }
-    </style>
-</head>
-
-<body>
-
-    <header>
-        <div class="container">
-            <h1>Hi, I'm Victor Vinicius</h1>
-            <div class="avatar_social">
-                <img src="https://i.imgur.com/cSWwJff.png" alt="Sua imagem de perfil">
-            </div>
-        </div>
-    </header>
-
-    <main class="container">
-        <section class="section section-about">
-            <h2>Sobre Mim</h2>
-            <p>Estou no mundo online há 15 anos, e descobri minha paixão pela programação recentemente. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na UNOPAR. Também participo de bootcamps na Dio e faço cursos na Udemy.</p>
-            <p>Estou em constante aprendizado, sempre em busca de mais conhecimento, dia após dia.</p>
-        </section>
-
-        <section class="section section-contact">
-            <h2>Contato</h2>
-            <ul class="ul-social-media">
-                <li><a href="https://github.com/Foqsz" target="_blank"><img src="https://i.imgur.com/MsXHhtL.png" alt="GitHub"></a></li>
-                <li><a href="https://instagram.com/victorviniciussz" target="_blank"><img src="https://i.imgur.com/l1ALufQ.png" alt="Instagram"></a></li>
-                <li><a href="https://www.linkedin.com/in/victor-vinicius-2a9166255/" target="_blank"><img src="https://i.imgur.com/IGRf0xt.png" alt="LinkedIn"></a></li>
-                <li><a href="mailto:contatovictorvinicius05@gmail.com"><img src="https://i.imgur.com/Xb42GEB.png" alt="Gmail"></a></li>
-            </ul>
-        </section>
-
-        <section class="section section-projects">
-            <h2>Projetos</h2>
-            <p>Check out some of my projects:</p>
-            <p>Sistema Web ASP-NET Core Entity Framework - <a href="https://github.com/Foqsz/SistemaWeb-ASP-NET-Core-MVC-EntityFramework">GitHub</a></p>
-            <p>Xadrez de console - <a href="https://github.com/Foqsz/xadrez-de-console">GitHub</a></p>
-            <p>Calculadora de IMC - <a href="https://github.com/Foqsz/CalculadoraIMC">GitHub</a></p>
-        </section>
-
-        <section class="section section-github-repos">
-            <h2>Meus últimos repositórios no GitHub</h2>
-            <ul id="github-repos-list"></ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>Feito por Victor Vinicius</p>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Victor Vinicius | Links</title>
+  </head>
+  <body>
+    <div class="content-wrapper__center">
+      <header class="header">
+        <img
+          src="images/foqsz-perfil.png"
+          alt="Foto Perfil"
+          class="fotoPerfil"
+        />
+        <h1 class="content-title">Victor Vinicius Alves de L. Souza</h1>
+        <h2 class="content-subtitle">Software Developer</h2>
+      </header>
+    </div>
+    <section class="contents">
+      <div>
+        <ul class="header-icons">
+          <li class="header-icons__instagram">
+            <a href="https://www.instagram.com/victorviniciussz/">
+              <i aria-hidden="true" class="fa-brands fa-square-instagram"></i>
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li class="header-icons__LinkedIn">
+            <a href="https://www.linkedin.com/in/victorvinicius/">
+              <i aria-hidden="true" class="fa-brands fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+          <li class="header-icons__github">
+            <a href="https://github.com/Foqsz">
+              <i class="fa-brands fa-square-github"></i>
+              <span>GitHub</span>
+            </a>
+          </li>
+          <li class="header-icons__whatsapp">
+            <a href="">
+              <i class="fa-brands fa-square-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+          </li>
+          <li class="header-icons__email">
+            <a href="contatovictorvinicius05@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Email</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer class="content-footer">
+      <p class="footer-text">© Desenvolvido por Victor Vinicius | 2025</p>
     </footer>
-
-    <script>
-        // Função para buscar e exibir os repositórios do GitHub
-        function fetchGitHubRepos() {
-            const githubUsername = 'Foqsz';
-            const apiUrl = `https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=5`;
-
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(repos => {
-                    const reposList = document.getElementById('github-repos-list');
-
-                    repos.forEach(repo => {
-                        const repoItem = document.createElement('li');
-                        const repoLink = document.createElement('a');
-                        repoLink.href = repo.html_url;
-                        repoLink.target = '_blank';
-                        repoLink.textContent = repo.name;
-                        repoLink.classList.add('btn', 'btn-primary', 'mx-2');
-                        repoItem.appendChild(repoLink);
-                        reposList.appendChild(repoItem);
-                    });
-                })
-                .catch(error => console.error('Erro ao buscar os repositórios do GitHub:', error));
-        }
-
-        window.onload = fetchGitHubRepos;
-    </script>
-
-</body>
-
+  </body>
 </html>
