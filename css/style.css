@@ -1,151 +1,149 @@
 :root {
-    --dark: hsl(206,100%,5%);
-    --light: #FFF;
-    --primary-color: #03a0fb;
-    --primary-color-dark: hsl(208, 94%, 13%);
-    --gray: #F6F6F6;
+  --dark: hsl(206, 100%, 5%);
+  --light: #fff;
+  --primary-color: #03a0fb;
+  --primary-color-dark: hsl(208, 94%, 13%);
+  --gray: #f6f6f6;
 }
 
-body
-{
-    background-color: var(--dark);
-    text-align: center;
-    background-image: url(../images/background2.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    font-family: "Josefin Sans", sans-serif;
+body {
+  background-color: var(--dark);
+  text-align: center;
+  background-image: url(../images/background2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Josefin Sans", sans-serif;
 }
 
-.content-wrapper__center{
-    max-width: 67.25rem; /* 1076px */ 
-    margin: 0 auto;
+.content-wrapper__center {
+  max-width: 67.25rem; /* 1076px */
+  margin: 0 auto;
 }
 
-.fotoPerfil{
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    margin-top: 1rem;
+.fotoPerfil {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin-top: 1rem;
 }
 
 .content-title,
-.content-subtitle{
-    color: var(--light);
-    font-size: 1.6rem;
-    margin-bottom: 0;
-    color: var(--primary-color);
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.61);
+.content-subtitle {
+  color: var(--light);
+  font-size: 1.6rem;
+  margin-bottom: 0;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.61);
 }
 
-.content-subtitle{
-    font-family: "Caveat", cursive;
-    margin-top: 0.3rem;
-    font-size: 2rem;
-    letter-spacing: .2rem;
-    color: var(--gray);
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+.content-subtitle {
+  font-family: "Caveat", cursive;
+  margin-top: 0.3rem;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  color: var(--gray);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.contents{
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
+.contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
-.header-icons{
-    list-style: none;
-    margin: 0; 
+.header-icons {
+  list-style: none;
+  margin: 0;
 }
 
-.header-icons a{ 
-    text-decoration: none;
-    color: var(--light);
-    justify-content: space-between; 
-    letter-spacing: .1rem;
-    font-size: 2rem; 
+.header-icons a {
+  text-decoration: none;
+  color: var(--light);
+  justify-content: space-between;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
 }
 
 .header-icons__instagram,
 .header-icons__github,
 .header-icons__LinkedIn,
 .header-icons__email,
-.header-icons__whatsapp { 
-    display: inline-block;     
-    transition: color .3s ease-in-out;
-    margin-top: 1rem; 
-    padding-top: 0.5rem;
-    padding-bottom: 0.3rem;
-    padding-left: 0.7rem;
-    padding-right: 0.7rem;
-    background-color: var(--primary-color);
-    border-radius: .7rem;
+.header-icons__whatsapp {
+  display: inline-block;
+  transition: color 0.3s ease-in-out;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  background-color: var(--primary-color);
+  border-radius: 0.7rem;
 }
 
-.content-footer{  
+.content-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--dark);
+  color: var(--light);
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 1070px) {
+  .fotoPerfil {
+    width: 180px;
+    height: 180px;
+  }
+
+  .content-title {
+    margin: 0;
+  }
+
+  .content-title,
+  .content-subtitle {
+    font-size: 3rem;
+  }
+
+  .header-icons__instagram,
+  .header-icons__github,
+  .header-icons__LinkedIn,
+  .header-icons__email,
+  .header-icons__whatsapp {
+    display: block;
+    cursor: pointer;
+    margin-top: 2rem;
+    padding: 0.8rem;
+  }
+
+  .header-icons__instagram:hover,
+  .header-icons__github:hover,
+  .header-icons__LinkedIn:hover,
+  .header-icons__email:hover,
+  .header-icons__whatsapp:hover {
+    color: var(--light);
+    background-color: var(--primary-color-dark);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.35);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .content-footer {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+  }
+
+  .content-footer {
+    background-color: transparent;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: var(--dark);
-    color: var(--light);    
-    letter-spacing: .1rem;
-    font-size: 1.1rem;
-}
-
-@media (min-width: 1070px)
-{
-    .fotoPerfil{
-        width: 180px;
-        height: 180px;
-    }
-
-    .content-title{
-        margin: 0;
-    }
-
-    .content-title,
-    .content-subtitle{
-        font-size: 3rem;
-    }
-
-    .header-icons__instagram,
-    .header-icons__github,
-    .header-icons__LinkedIn,
-    .header-icons__email,
-    .header-icons__whatsapp{
-        display: block;
-        cursor: pointer;
-        margin-top: 2rem;
-        padding: .8rem;
-    }
-
-    .header-icons__instagram:hover,
-    .header-icons__github:hover,
-    .header-icons__LinkedIn:hover,
-    .header-icons__email:hover,
-    .header-icons__whatsapp:hover{ 
-        color: var(--light);
-        background-color: var(--primary-color-dark);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        transform: scale(1.35); 
-        transition: all .2s ease-in-out;
-    }
-
-    .content-footer{
-        background-color: transparent;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        font-size: 1.5rem;
-    }
-
-    .content-footer{  
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: var(--light);    
-    letter-spacing: .1rem;
-    font-size: 1.1rem;
-}
+    color: var(--light);
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+  }
 }
