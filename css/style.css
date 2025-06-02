@@ -10,7 +10,7 @@ body
 {
     background-color: var(--dark);
     text-align: center;
-    background-image: url(/Foqsz.github.io/images/background2.jpg);
+    background-image: url(../images/background2.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
