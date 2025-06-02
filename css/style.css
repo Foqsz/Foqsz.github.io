@@ -14,6 +14,9 @@ body {
   background-position: center;
   background-attachment: fixed;
   font-family: "Josefin Sans", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .content-wrapper__center {
@@ -73,17 +76,17 @@ body {
 .header-icons__whatsapp {
   display: inline-block;
   transition: color 0.3s ease-in-out;
-  margin-top: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.3rem;
-  padding-left: 0.7rem;
-  padding-right: 0.7rem;
+  margin-top: .5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   background-color: var(--primary-color);
   border-radius: 0.7rem;
 }
 
 .content-footer {
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   bottom: 0;
   width: 100%;
@@ -93,14 +96,24 @@ body {
   font-size: 1.1rem;
 }
 
+.content-tecnologias__title {
+  color: var(--gray);
+  font-size: 3.5rem;
+}
+
 @media (min-width: 1070px) {
   .fotoPerfil {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
+    margin-top: 0.5rem;
   }
 
   .content-title {
     margin: 0;
+  }
+
+  .contents {
+    display: flex;
   }
 
   .content-title,
@@ -115,7 +128,7 @@ body {
   .header-icons__whatsapp {
     display: block;
     cursor: pointer;
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 0.8rem;
   }
 
@@ -127,7 +140,7 @@ body {
     color: var(--light);
     background-color: var(--primary-color-dark);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transform: scale(1.35);
+    transform: scale(1.15);
     transition: all 0.2s ease-in-out;
   }
 
@@ -136,14 +149,26 @@ body {
     font-size: 1.5rem;
   }
 
-  .content-footer {
-    background-color: transparent;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+  .page-footer{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-footer { 
+    background-color: transparent;  
     color: var(--light);
     letter-spacing: 0.1rem;
     font-size: 1.4rem;
+    margin: 0;
+    text-align: center;
+    align-items: center; 
+  }
+
+  main{
+    flex: 1;
+  }
+
+  .content-tecnologias__title {
+    margin: 0;
   }
 }
