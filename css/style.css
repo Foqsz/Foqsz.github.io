@@ -19,6 +19,18 @@ body {
   flex-direction: column;
 }
 
+@keyframes tecno {
+  from {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(-10);
+  }
+}
+
 .content-wrapper__center {
   max-width: 67.25rem; /* 1076px */
   margin: 0 auto;
@@ -47,6 +59,7 @@ body {
   letter-spacing: 0.2rem;
   color: var(--gray);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: tecno 2s linear 2s infinite alternate;
 }
 
 .contents {
@@ -76,8 +89,8 @@ body {
 .header-icons__whatsapp {
   display: inline-block;
   transition: color 0.3s ease-in-out;
-  margin-top: .5rem;
-  padding-top: 0.2rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
   padding-bottom: 0.2rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -99,9 +112,22 @@ body {
 .content-tecnologias__title {
   color: var(--gray);
   font-size: 3.5rem;
+  margin: 0;
 }
 
-@media (min-width: 1070px) {
+.seta {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  fill: var(--light);
+  animation: tecno 2s linear 2s infinite alternate;
+  cursor: pointer;
+}
+
+@media (min-width: 460px) {
   .fotoPerfil {
     width: 150px;
     height: 150px;
@@ -149,26 +175,31 @@ body {
     font-size: 1.5rem;
   }
 
-  .page-footer{
+  .page-footer {
     display: flex;
     flex-direction: column;
   }
 
-  .content-footer { 
-    background-color: transparent;  
+  .content-footer {
+    background-color: transparent;
     color: var(--light);
     letter-spacing: 0.1rem;
     font-size: 1.4rem;
     margin: 0;
     text-align: center;
-    align-items: center; 
+    align-items: center;
   }
 
-  main{
+  main {
     flex: 1;
   }
 
   .content-tecnologias__title {
     margin: 0;
+    animation: tecno 2s linear 2s infinite alternate;
+  }
+
+  .seta {
+    display: none;
   }
 }
