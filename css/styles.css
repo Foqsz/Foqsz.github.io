@@ -1,6 +1,6 @@
 :root{
     --page-bg: #0B090D;
-
+    --page-bg-secondary: #1E90FF;
 }
 
 *{
@@ -13,5 +13,5 @@ body{
     font-family: 'Inter', sans-serif; 
     font-weight: 400;
     font-style: normal;
-    background: var(--page-bg) linear-gradient(to bottom, #1E90FFFF, #48D1CC00) fixed;
+    background: var(--page-bg) linear-gradient(to bottom, var(--page-bg-secondary), #48D1CC00) fixed;
 }
