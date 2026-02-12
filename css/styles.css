@@ -1,6 +1,6 @@
 :root{
     --page-bg: #0B090D;
-    --page-bg-secondary: #1E90FF;
+    --page-bg-secondary: #1E90FFff;
 }
 
 *{
@@ -11,7 +11,12 @@
 
 body{
     font-family: 'Inter', sans-serif; 
+    font-optical-sizing: auto; /* melhora a legibilidade em tamanhos de fontes diferentes */
     font-weight: 400;
     font-style: normal;
     background: var(--page-bg) linear-gradient(to bottom, var(--page-bg-secondary), #48D1CC00) fixed;
+}
+
+.logoIcon{
+    background-color: var(--page-bg-secondary);
 }
