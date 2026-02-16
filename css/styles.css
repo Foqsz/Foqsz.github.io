@@ -174,3 +174,29 @@ p{
     align-items: center;
     gap:.5rem;
 }
+
+.technologies{
+    display: flex;
+    flex-direction: column;
+    gap: var(--subSection-distance-gap);
+}
+
+.technologies__carroussel__wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    padding-bottom: 1rem;
+    padding-right: var(--grid-gap);
+
+    scroll-snap-type: x mandatory;
+
+    img{
+        margin-left: var(--grid-gap);
+        width: calc(100vw - var(--grid-margin) * 2);
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: calc(100vw - var(--grid-margin) * 2);
+
+        scroll-snap-align: center;
+    }
+}
