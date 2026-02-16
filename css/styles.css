@@ -5,12 +5,17 @@
     --grid-gap: .75rem;
     --grid-margin: 1.5rem;
     --text-color: white;
+    --text-size: .75rem;
 
     --h1-size: 1.75rem;
+    --h2-size: 1.5rem;
+    --h3-size: 1.25rem;
+
     --button-padding-y: 1rem;
     --button-padding-x: 2.25rem;
 
     --section-distance-top: 4.5rem;
+    --subSection-distance-gap: 3.75rem;
 }
 
 *{
@@ -98,7 +103,7 @@ h1{
     text-transform: uppercase;
     /* color: transparent;
     -webkit-text-stroke: 2px var(--text-color);  */
-    text-shadow: 2px 2px var(--text-color), -2px -2px var(--text-color), -2px 2px var(--text-color), 2px -2px var(--text-color);
+    text-shadow: 2px 2px var(--text-color), -2px -2px var(--text-color), -1px 2px var(--text-color), 2px -2px var(--text-color);
     display: inline-block;
     color: #0B090D;
 }
@@ -108,8 +113,64 @@ h1{
     padding: var(--button-padding-y) var(--button-padding-x);
     border-radius: 10rem;
     background-color: var(--page-bg-secondary);
+    font-weight: 600;
 }
 
 main >*{
     padding-top: var(--section-distance-top);
+}
+
+.h2{
+    text-align: center;
+    font-weight: 900;
+    font-size: var(--h2-size);
+}
+
+.title--thin{
+    font-weight: 200;
+    font-style: italic;
+    display: block;
+}
+
+.courses,
+.courses__list{
+    display: flex;
+    flex-direction: column;
+    gap: var(--subSection-distance-gap);
+}
+
+.courses__card{
+    text-align: center;
+    
+}
+
+.h3{
+    font-size: var(--h3-size);
+    font-weight: 900;
+    text-align: center;
+}
+
+p{
+    font-size: var(--text-size);
+}
+
+.btn--stroke{
+    background-color: transparent;
+    border: 2px solid var(--page-bg-secondary);
+    color: var(--page-bg-secondary)
+}
+
+.courses__card__content{
+    margin-top: 1rem;
+
+    p{
+        margin-top: 1.625rem 0;
+    }
+}
+
+.courses__card__ctas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:.5rem;
 }
