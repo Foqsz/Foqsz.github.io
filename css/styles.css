@@ -223,3 +223,28 @@ main{
     border: 3px solid transparent; */
   }
 }
+
+.projetos, .projects__list{
+    display: flex;
+    flex-direction: column;
+    gap: var(--subSection-distance-gap);
+}
+
+.projects__card__content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.projects__card__ctas{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+}
+
+/* .btn--ghost{
+    color: var(--page-bg-secondary);
+    border: none;
+    background-color: transparent;
+} */
