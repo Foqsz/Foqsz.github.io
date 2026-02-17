@@ -117,7 +117,7 @@ h1{
 }
 
 main >*{
-    padding-top: var(--section-distance-top);
+    margin-top: var(--section-distance-top);
 }
 
 .h2{
@@ -230,6 +230,10 @@ main{
     gap: var(--subSection-distance-gap);
 }
 
+.projects__card{
+    text-align: center;
+}
+
 .projects__card__content{
     display: flex;
     flex-direction: column;
@@ -248,3 +252,38 @@ main{
     border: none;
     background-color: transparent;
 } */
+
+.faleComigo{
+    background-color: var(--page-bg-secondary);
+    background-position: center;
+    background-size: cover;
+    padding: var(--grid-margin) 0;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: stretch;
+}  
+
+.faleComigo__content{
+    display: flex;
+    justify-content: center;
+    gap: var(--grid-gap);
+    margin-top: var(--grid-gap); 
+}
+
+.news__seta{
+    display: none;
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
