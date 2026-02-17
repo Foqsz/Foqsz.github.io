@@ -200,3 +200,26 @@ p{
         scroll-snap-align: center;
     }
 }
+
+main{
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: var(--page-bg-secondary) transparent;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    height: 1.25rem;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--page-bg-secondary);
+    /* border-radius: 10px;
+    border: 3px solid transparent; */
+  }
+}
