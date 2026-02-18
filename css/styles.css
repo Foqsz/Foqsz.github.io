@@ -308,3 +308,26 @@ main{
     flex-basis: calc(100vw - var(--grid-margin) * 2);
     scroll-snap-align: center;
 }  
+
+.footer{
+    background-color: #070608;
+    text-align: center;
+    padding-top: var(--section-distance-top);
+    margin-top: var(--section-distance-top);    
+    padding-bottom: var(--section-distance-top);
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: var(--grid-margin);
+        align-items: center;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+}
+
+.footer__logo{
+    max-width: 8.5rem;
+}
