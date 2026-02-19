@@ -13,6 +13,7 @@
 
     --button-padding-y: 1rem;
     --button-padding-x: 2.25rem;
+    --button-font-size: 1rem;
 
     --section-distance-top: 4.5rem;
     --subSection-distance-gap: 3.75rem;
@@ -116,6 +117,7 @@ h1{
     border-radius: 10rem;
     background-color: #04335f;
     font-weight: 600;
+    font-size: var(--button-font-size);
 }
 
 main >*{
@@ -144,6 +146,16 @@ main >*{
 .courses__card{
     text-align: center;
     
+}
+
+.courses__card__img{
+    max-width: 50%;
+}
+
+.technologies__carroussel__wrapper{
+    img{
+        max-width: 30%;
+    }
 }
 
 .h3{
@@ -359,4 +371,74 @@ main{
 
 .footer__logo{
     max-width: 8.5rem;
+}
+
+.sm-hide{
+    display: none;
+}
+
+@media screen and (width > 64em){
+    :root{
+        --h1-size: 3.25rem;
+        --h2-size: 2.25rem;
+        --button-font-size: 1.25rem;
+    }
+
+    .md-hide{
+        display: none;
+    }
+
+    .md-show{
+        display: revert;
+    }
+
+    .header{
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding-top: 2.375rem;
+        padding-bottom: 3.375rem;
+        background-image: linear-gradient(to bottom, var(--page-bg-secondary) 80%, #48cec900);
+        z-index: 1;
+    }
+
+    .logoIcon__logo{
+        width: 8rem;
+        margin: auto;
+    }
+
+    .nav-menu{
+        margin-top: 1.75rem;
+    }
+
+    .hero{
+        gap: 4.5rem;
+    }
+
+    .nav-menu{
+        ul{
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+
+    .hero__cta{
+        position: relative;
+        left: .5rem;
+
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4rem;
+            height: 5rem;
+            background-image: url(../images/target.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            transform: translate(-40%, -10%);
+        }
+    }
 }
