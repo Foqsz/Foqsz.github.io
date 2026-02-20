@@ -176,8 +176,8 @@ p{
 
 .btn--stroke{
     background-color: transparent;
-    border: 2px solid var(--page-bg-secondary);
-    color: var(--page-bg-secondary)
+    border: 2px solid white;
+    color: white;
 }
 
 .courses__card__content{
@@ -204,6 +204,7 @@ p{
     display: flex;
     flex-direction: column;
     gap: var(--subSection-distance-gap);
+    margin-top: 5rem;
 }
 
 .technologies__carroussel__wrapper{
@@ -257,14 +258,57 @@ main{
   }
 }
 
-.projetos, .projects__list{
-    display: flex;
-    flex-direction: column;
+.projetos{
+    margin-top: 5rem;
+}
+
+.projects__list{
+    display: grid;
+    grid-template-columns: 1fr;
     gap: var(--subSection-distance-gap);
+    margin-top: 1rem;
 }
 
 .projects__card{
     text-align: center;
+    /* padding: 2rem; */
+    border-radius: 12px;
+    transition: 0.3s;
+    margin-top: 2rem;
+}
+
+.projects__card:hover{
+    transform: translateY(-5px);
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.pagination button{
+    width: 45px;
+    height: 45px;
+
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+
+    background: transparent;
+    color: white;
+
+    font-size: 1.2rem;
+    cursor: pointer;
+
+    transition: all .25s ease;
+}
+
+.pagination button:hover{
+    background: white;
+    color: black;
+    transform: translateY(1rem);
 }
 
 .projects__card__content{
@@ -280,11 +324,11 @@ main{
     align-items: center;
 }
 
-/* .btn--ghost{
+.btn--nodeploy{
     color: var(--page-bg-secondary);
     border: none;
-    background-color: transparent;
-} */
+    /* background-color: transparent; */
+}
 
 .faleComigo{
     background-color: var(--page-bg-secondary);
@@ -381,6 +425,12 @@ main{
 
 .sm-hide{
     display: none;
+}
+
+.projects__card__img{
+    width: 180px;
+    margin: 0 auto;
+    display: block;
 }
 
 @media screen and (width > 64em){
@@ -534,5 +584,9 @@ main{
         &::after{
             right: 0;
         }
+    }
+
+    .projects__list{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
