@@ -393,6 +393,11 @@ main{
         --text-size: 1rem;
     }
 
+    body{
+        background: var(--page-bg) linear-gradient(to bottom, var(--page-bg-secondary) 30%, #48D1CC00 60%) no-repeat;
+        background-size: 100% 100vh;
+    }
+
     .md-hide{
         display: none;
     }
@@ -406,10 +411,10 @@ main{
         top: 0;
         left: 0;
         width: 100%;
-        padding-top: 2.375rem;
+        padding-top: 1.375rem;
         padding-bottom: 3.375rem;
-        background-image: linear-gradient(to bottom, var(--page-bg-secondary) 80%, #48cec900);
-        z-index: 1;
+        background-image: linear-gradient(to bottom, #1b78d6fa, #1b78d6e7 70%, #48cec900);
+        z-index: 3;
     }
 
     .logoIcon__logo{
@@ -502,5 +507,32 @@ main{
     .courses__card__ctas{
         flex-direction: row;
         justify-content: end;
+    }
+
+    .technologies__carroussel__wrapper img{
+        flex: auto;
+    }
+
+    .technologies__carroussel{
+        position: relative;
+
+        &::after,
+        &::before{
+            content:"";
+            position: absolute;
+            top: 0;
+            bottom: 1rem;
+            width: 9rem;
+            pointer-events: none; 
+        }
+
+        &::before{
+            left: 0;
+            background-image: linear-gradient(to right, var(--page-bg) var(--grid-margin), #0000);
+        }
+
+        &::after{
+            right: 0;
+        }
     }
 }
