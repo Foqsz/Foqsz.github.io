@@ -17,6 +17,8 @@
 
     --section-distance-top: 4.5rem;
     --subSection-distance-gap: 3.75rem;
+
+    --nav-height: 13.75rem;
 }
 
 *{
@@ -433,10 +435,15 @@ main{
     display: block;
 }
 
+section{
+    scroll-margin-top: var(--nav-height);
+}
+
 @media screen and (width > 64em){
     :root{
         --h1-size: 3.25rem;
         --h2-size: 2.25rem;
+        --h3-size: 1.75rem;
         --button-font-size: 1.25rem;
         --grid-gap: 1.25rem;
         --grid-margin: 2rem;
