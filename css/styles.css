@@ -83,6 +83,8 @@ img{
         padding: 0.75rem;
         display: inline-block;
         border-bottom: 1px solid transparent;
+        font-weight: 700;
+        font-size: var(--text-size);
 
         &:hover{
             border-bottom: 1px solid #135291;
@@ -113,6 +115,18 @@ h1{
     display: inline-block;
     color: #0B090D;
     display: block;
+}
+
+.news__whatsapp,
+.news__Linkedin,
+.news__gmail,
+.news__instagram{
+    width: 2.5rem;
+    transition: 0.3s;
+
+    &:hover{
+        transform: translateY(-10px);
+    }
 }
 
 .btn{
@@ -342,7 +356,11 @@ main{
     flex-direction: column;
     gap: 2.5rem;
     align-items: stretch;
-}  
+} 
+
+.faleComigo h2{
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.404);
+}
 
 .faleComigo__content{
     display: flex;
@@ -370,10 +388,10 @@ main{
 .aboutMe__wrapper{
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     padding-bottom: 1rem;
     padding-right: var(--grid-gap);
-    scroll-snap-type: x mandatory;
+    /* scroll-snap-type: x mandatory; */
     margin: 0;
 
 }
@@ -390,16 +408,23 @@ main{
     align-items: center;
 
     img{
-        width: 50%;
+        max-width: 20%;
+        margin-top: 1rem;
     }
 }  
 
 .aboutMe__cards__content{
     text-align: center;
+    margin-top: 1rem;
+    width: 70%;
     
     .h3{
         font-weight: 500;
     }
+}
+
+aboutMe__cards__content p{
+    font-size: var(--text-size);
 }
 
 .footer{
@@ -437,6 +462,21 @@ main{
 
 section{
     scroll-margin-top: var(--nav-height);
+}
+
+.formacao__card__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        margin-top: 1.5rem;
+    }
+
+    .h3{
+        font-size: var(--h3-size);
+    }
 }
 
 @media screen and (width > 64em){
