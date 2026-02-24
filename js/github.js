@@ -1,7 +1,7 @@
 const usuario = "Foqsz"; // coloque seu github aqui
 
 let pagina = 1;
-const porPagina = 4;
+const porPagina = obterQuantidadeProjetos();
 
 async function carregarRepos() {
 
@@ -80,14 +80,28 @@ document.addEventListener("DOMContentLoaded", () => {
     buttonNext.addEventListener("click", proximaPagina);
 });
 
+function obterQuantidadeProjetos() {
+
+    const largura = window.innerWidth;
+
+    // desktop
+    if (largura > 1440) return 3;
+
+    // tablet
+    if (largura > 1024) return 2;
+
+    // mobile
+    return 2;
+}
+
 function proximaPagina() {
     pagina++;
     carregarRepos();
-
-    window.scrollTo({
-        top: document.getElementById("projetos").offsetTop,
-        behavior: "smooth"
-    });
+    
+    // window.scrollTo({
+    //     top: document.getElementById("projetos").offsetTop,
+    //     behavior: "smooth"
+    // });
 }
 
 function paginaAnterior() {
@@ -96,10 +110,10 @@ function paginaAnterior() {
         carregarRepos();
     }
 
-    window.scrollTo({
-        top: document.getElementById("projetos").offsetTop,
-        behavior: "smooth"
-    });
+    // window.scrollTo({
+    //     top: document.getElementById("projetos").offsetTop,
+    //     behavior: "smooth"
+    // });
 }
 
 // carrega ao abrir página
