@@ -88,3 +88,34 @@ if(mediaQuery.addEventListener){
 }
 
 handleMediaQueryChange(mediaQuery);
+
+// add smooth scroll-to-top when clicking the logo(s)
+;(function attachLogoScrollToTop(){
+    try{
+        const logos = document.querySelectorAll('.logoIcon__logo');
+        if(!logos || logos.length === 0) return;
+
+        logos.forEach(logo => {
+            // make keyboard-focusable and announce as clickable
+            if(!logo.hasAttribute('tabindex')) logo.setAttribute('tabindex', '0');
+            if(!logo.hasAttribute('role')) logo.setAttribute('role', 'button');
+
+            logo.addEventListener('click', function(e){
+                // in case it's inside an anchor, prevent default navigation
+                if(e && typeof e.preventDefault === 'function') e.preventDefault();
+                // smooth scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            logo.addEventListener('keydown', function(e){
+                if(e.key === 'Enter' || e.key === ' '){
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+    } catch (err) {
+        // don't break other scripts
+        console.warn('attachLogoScrollToTop error', err);
+    }
+})();

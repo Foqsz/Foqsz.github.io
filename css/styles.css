@@ -65,6 +65,7 @@ img{
 
 .logoIcon__logo{
     width: 4.75rem;
+    cursor: pointer;
     img{
         max-width: 100%;
     }
