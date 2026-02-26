@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor Vinicius | Foqs</title>
+    <title>Victor Vinicius | Dev</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
     <div class="logoIcon md-hide">
         <div class="logoIcon__logo"><img src="images/VVDevLogo2.png" alt="Victor Vinicius Logo"></div>
 
-        <a href="#" aria-hidden="true">
+        <a href="#" aria-hidden="true" id="menuButton">
             <img src="images/burger-menu-svgrepo-com.svg" alt="Menu Icon">
         </a>
     </div>
@@ -36,7 +36,7 @@
     <main>
         <section class="hero container">
             <h1 class="hero__title">Desenvolvedor de Software <span class="hero__title--upper">Victor Vinicius</span></h1>
-            <a href="#courses" class="btn hero__cta">Certificações</a>
+            <div><a href="#courses" class="btn hero__cta">Certificações</a></div>
         </section>
 
         <section class="courses container" id="courses">
@@ -163,8 +163,8 @@
                 <h2 class="h2">Tecnologias <span class="title--thin">As quais utilizo</span></h2>
             </div>
 
-            <section class="technologies__carroussel">
-                <div class="technologies__carroussel__wrapper">
+            <section class="technologies__carousel">
+                <div class="technologies__carousel__wrapper">
                     <img src="./images/Tecnologias/Csharp_Logo.png" alt="Csharp">
                     <img src="./images/Tecnologias/AspNet_logo.png" alt="Asp Net">
                     <img src="./images/Tecnologias/NET_Core_Logo.svg.png" alt="DotNet Core">
@@ -265,5 +265,7 @@
     </footer>
 
     <script src="./js/github.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>

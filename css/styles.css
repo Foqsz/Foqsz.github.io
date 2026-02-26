@@ -85,11 +85,20 @@ img{
         border-bottom: 1px solid transparent;
         font-weight: 700;
         font-size: var(--text-size);
+        text-transform: uppercase;
 
         &:hover{
-            border-bottom: 1px solid #135291;
+            border-bottom: 3px solid #135291;
         }
     }
+}
+
+.nav-menu ul li:hover{
+    transform: translateY(-8px);
+}
+
+.nav-menu.menu-closed{
+    display: none;
 }
 
 h1{
@@ -113,7 +122,7 @@ h1{
     -webkit-text-stroke: 2px var(--text-color);  */
     text-shadow: 2px 2px var(--text-color), -2px -2px var(--text-color), -1px 2px var(--text-color), 2px -2px var(--text-color);
     display: inline-block;
-    color: #0B090D;
+    color: #063352;
     display: block;
 }
 
@@ -171,12 +180,12 @@ main >*{
 }
 
 .courses__card__img{
-    width: 11.75rem;
+    width: 11rem;
     /* max-width: 100%; */
     margin-top: 1.25rem;
 }
 
-.technologies__carroussel__wrapper img{
+.technologies__carousel__wrapper img{
     max-width: 10rem;
 }
 
@@ -184,6 +193,7 @@ main >*{
     font-size: var(--h3-size);
     font-weight: 900;
     text-align: center;
+    margin-top: 0;
 }
 
 p{
@@ -223,7 +233,7 @@ p{
     margin-top: 5rem;
 }
 
-.technologies__carroussel__wrapper{
+.technologies__carousel__wrapper{
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
@@ -306,8 +316,8 @@ main{
 }
 
 .pagination button{
-    width: 45px;
-    height: 45px;
+    width: 2.8125rem;
+    height: 2.8125rem;
 
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,0.2);
@@ -589,8 +599,8 @@ section{
     .courses__card__img{
         /* width: 20%; */
         grid-column: 1 / 3;
-        width: 80%;
-        margin-top: 0;
+        width: 95%;
+        margin-top: var(--grid-margin);
     }
 
     .courses__card__content{
@@ -606,11 +616,11 @@ section{
         justify-content: end;
     }
 
-    .technologies__carroussel__wrapper img{
+    .technologies__carousel__wrapper img{
         flex: auto;
     }
 
-    .technologies__carroussel{
+    .technologies__carousel{
         position: relative;
 
         &::after,
@@ -649,16 +659,10 @@ section{
         --subsection-distance-gap: 7.75rem;
     }
 
-    /* img{
-        max-width: 50%;
-    }
-
-    .courses__card__img{
-        width: 40%;
-    } */
-
     .courses__card__img{
         width: 100%;
+        grid-column: 3/3;
+        margin-top: var(--grid-gap);
     }
 
     .header{
@@ -683,21 +687,26 @@ section{
         grid-template-columns: repeat(12, 1fr);
     }
 
-    .courses__card__img{
-        grid-column: 3/3;
-    }
-
     .courses__card__content{
         grid-column: 4/-3;
     }
 
-    .technologies__carroussel{
+    .technologies__carousel{
+        max-width: 85%; 
         justify-content: center;
         display: flex;
+        margin: 0 auto;
+        /* outer container will clip the scrolling inner wrapper */
+        overflow: hidden;
     }
 
-    .technologies__carroussel__wrapper{
-        max-width: 60%;
+    .technologies__carousel__wrapper{
+        /* max-width: 30%; */
+        overflow: hidden;
+        gap: .5em;
+        img{
+            margin: 0;
+        }
     }
 
     .projects__list{
@@ -708,5 +717,41 @@ section{
 
     .footer p{
         font-size: 1.5rem;
+    }
+
+    .hero{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+
+        &>*{
+            grid-column: 2/-2;
+        }
+    }
+
+    .aboutMe__cards img{
+        max-width: 10%;
+    }
+
+    .aboutMe__cards__content{
+        width: 50%;
+    }
+
+    @keyframes scrollLoop{
+        from{ transform: translateX(0); }
+        to{ transform: translateX(calc((var(--w) + var(--grid-gap)) * var(--qtd) * -1)); }
+    }
+
+    .js-enabled.technologies__carousel__wrapper{
+        --w: 26.25em;
+        display: flex;
+        width: max-content;
+        /* allow the wrapper to expand beyond any previous max-width so cloned items are visible */
+        max-width: none;
+        overflow: visible;
+        align-items: center;
+        margin: 0 auto;
+        gap: .5em;
+        will-change: transform;
+        /* animation is set dynamically in JS to better match item widths */
     }
 }
